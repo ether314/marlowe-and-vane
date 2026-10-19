@@ -7,6 +7,7 @@
   "hosting": {
     "site": "marlowe-and-vane",
     "public": "public",
+    "predeploy": ["node scripts/build-config.mjs"],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "trailingSlash": false,
