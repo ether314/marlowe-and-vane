@@ -1,0 +1,58 @@
+rules_version = '2';
+
+// Marlowe & Vane: the catalog is public to read and never writable from the browser.
+// Visitors can only append to two collections (newsletter sign-ups and bag reservations),
+// and only with a strictly validated shape. Nothing written by visitors can be read back.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isText(value, min, max) {
+      return value is string && value.size() >= min && value.size() <= max;
+    }
+
+    function isEmail(value) {
+      return isText(value, 5, 120) && value.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$');
+    }
+
+    match /pieces/{pieceId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /origins/{originId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /subscribers/{subscriberId} {
+      allow create: if request.resource.data.keys().hasOnly(['email', 'source', 'createdAt'])
+                    && request.resource.data.keys().hasAll(['email', 'createdAt'])
+                    && isEmail(request.resource.data.email)
+                    && (!('source' in request.resource.data) || isText(request.resource.data.source, 1, 40))
+                    && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if false;
+    }
+
+    match /reservations/{reservationId} {
+      allow create: if request.resource.data.keys().hasOnly(['name', 'email', 'note', 'items', 'subtotal', 'currency', 'source', 'createdAt'])
+                    && request.resource.data.keys().hasAll(['name', 'email', 'items', 'subtotal', 'createdAt'])
+                    && isText(request.resource.data.name, 1, 80)
+                    && isEmail(request.resource.data.email)
+                    && (!('note' in request.resource.data) || isText(request.resource.data.note, 0, 600))
+                    && request.resource.data.items is list
+                    && request.resource.data.items.size() > 0
+                    && request.resource.data.items.size() <= 12
+                    && request.resource.data.subtotal is number
+                    && request.resource.data.subtotal >= 0
+                    && request.resource.data.subtotal < 10000000
+                    && (!('currency' in request.resource.data) || isText(request.resource.data.currency, 3, 3))
+                    && (!('source' in request.resource.data) || isText(request.resource.data.source, 1, 40))
+                    && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
