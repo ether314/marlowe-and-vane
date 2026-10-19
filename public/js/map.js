@@ -36,7 +36,13 @@ export async function renderMap(container, cat, { origins, roles = {}, compact =
   const pm = project(w, 0, -50);
 
   const arcs = list.map(({ o, xy }, i) => `<path class="map__arc" data-origin="${o.id}" d="${arcPath(xy, home)}" pathLength="1" style="transition-delay:${(i * 0.14).toFixed(2)}s"/>`).join('');
-  const travelers = list.map(({ o, xy, dist }, i) => `<circle r="1.9" fill="#f2e6a8"><animateMotion dur="${(5 + dist / 2600).toFixed(1)}s" begin="${(i * 0.8).toFixed(1)}s" repeatCount="indefinite" path="${arcPath(xy, home)}"/></circle>`).join('');
+  // Markers stay hidden until their own animation starts, so none waits in the corner of the map.
+  const travelers = list
+    .map(({ xy, dist }, i) => {
+      const begin = `${(i * 0.8).toFixed(1)}s`;
+      return `<circle r="1.9" fill="#f2e6a8" visibility="hidden"><set attributeName="visibility" to="visible" begin="${begin}" fill="freeze"/><animateMotion dur="${(5 + dist / 2600).toFixed(1)}s" begin="${begin}" repeatCount="indefinite" path="${arcPath(xy, home)}"/></circle>`;
+    })
+    .join('');
   const pins = list.map(({ o, xy }) => `<g class="map__pin" data-origin="${o.id}" transform="translate(${f1(xy[0])} ${f1(xy[1])})" tabindex="0" role="button" aria-label="${esc(o.city)}, ${esc(o.country)}"><circle class="ring" r="6"/><circle class="core" r="3.2"/><circle r="14" fill="transparent"/></g>`).join('');
 
   const rows = list.map(({ o, dist }, i) => `<button class="ledger__row" type="button" data-origin="${o.id}"><i class="num">${String(i + 1).padStart(2, '0')}</i><b>${esc(o.city)}<small>${esc(roles[o.id] || o.craft)} · ${esc(o.country)}</small></b><span class="num">${km(dist)}</span></button>`).join('');

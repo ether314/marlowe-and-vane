@@ -1,5 +1,5 @@
 // Product page: configurator, four ways to see the piece (studio, room, scale, fabric), passport, and journey map.
-import { $, $$, esc, money, coord, arrow, docNumber, toast } from './util.js';
+import { $, $$, esc, money, coord, arrow, docNumber } from './util.js';
 import { studioSVG, sofaDims } from './art.js';
 import { roomSVG, scaleSVG, fabricSVG, swatchSVG } from './art-scenes.js';
 import { sealSVG } from './marks.js';
@@ -208,7 +208,6 @@ export const pieceView = {
 
     $('#add', root).addEventListener('click', () => {
       addToBag(p.slug, cfg);
-      toast('Added to your bag');
       document.dispatchEvent(new CustomEvent('bag:open'));
     });
 
