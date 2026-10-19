@@ -1,8 +1,12 @@
 node_modules/
 .firebase/
 .claude/
+.serena/
 *.log
 .DS_Store
 .env
 .env.*
+!.env.example
 *.pem
+# Generated from .env by scripts/build-config.mjs
+public/js/firebase-config.js
