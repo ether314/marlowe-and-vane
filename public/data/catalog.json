@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "atelier": { "id": "atelier", "name": "The Atelier", "city": "London", "country": "England", "lat": 51.5074, "lon": -0.1278 },
+  "origins": [
+    { "id": "santa-croce", "city": "Santa Croce sull'Arno", "region": "Tuscany", "country": "Italy", "continent": "Europe", "lat": 43.7133, "lon": 10.765, "craft": "Vegetable-tanned leather", "blurb": "Tanned in oak-bark pits in Tuscany's leather district, then dried slowly so the grain stays supple for decades." },
+    { "id": "high-wycombe", "city": "High Wycombe", "region": "Buckinghamshire", "country": "England", "continent": "Europe", "lat": 51.6286, "lon": -0.7482, "craft": "English chair-making", "blurb": "The Chiltern town that has built English chairs and frames since the 1700s." },
+    { "id": "arequipa", "city": "Arequipa", "region": "Andes", "country": "Peru", "continent": "Americas", "lat": -16.409, "lon": -71.5375, "craft": "Alpaca bouclé", "blurb": "Fleece from highland alpacas, spun into looped bouclé yarn at the foot of El Misti." },
+    { "id": "herning", "city": "Herning", "region": "Jutland", "country": "Denmark", "continent": "Europe", "lat": 56.1393, "lon": 8.9744, "craft": "Danish cabinetmaking", "blurb": "Jutland workshops known for light, strong frames that can be repaired for generations." },
+    { "id": "azilal", "city": "Azilal", "region": "High Atlas", "country": "Morocco", "continent": "Africa", "lat": 31.9617, "lon": -6.5667, "craft": "Atlas Mountain weaving", "blurb": "Wool woven by cooperatives in the High Atlas, patterned by hand after each weaver's village." },
+    { "id": "varanasi", "city": "Varanasi", "region": "Uttar Pradesh", "country": "India", "continent": "Asia", "lat": 25.3176, "lon": 82.9739, "craft": "Silk brocade", "blurb": "Hand-loomed on the Ganges by families who have worked the same looms for generations." },
+    { "id": "chipping-campden", "city": "Chipping Campden", "region": "Cotswolds", "country": "England", "continent": "Europe", "lat": 52.0508, "lon": -1.7792, "craft": "Arts and Crafts joinery", "blurb": "Cotswold workshops carrying on the hand-built tradition of the Arts and Crafts movement." },
+    { "id": "teotitlan", "city": "Teotitlán del Valle", "region": "Oaxaca", "country": "Mexico", "continent": "Americas", "lat": 17.0377, "lon": -96.5326, "craft": "Cochineal-dyed wool", "blurb": "Zapotec weavers dye wool with cochineal and plant pigments, giving reds the color of baked clay." },
+    { "id": "kyoto", "city": "Kyoto", "region": "Kansai", "country": "Japan", "continent": "Asia", "lat": 35.0116, "lon": 135.7681, "craft": "Persimmon dye", "blurb": "Kakishibu, a tannin pressed from unripe persimmons, brushed onto cotton and cured in the sun." },
+    { "id": "takayama", "city": "Takayama", "region": "Hida", "country": "Japan", "continent": "Asia", "lat": 36.1461, "lon": 137.2522, "craft": "Hinoki joinery", "blurb": "Frames joined without screws in the mountain town famed for its woodworkers." },
+    { "id": "gqeberha", "city": "Gqeberha", "region": "Eastern Cape", "country": "South Africa", "continent": "Africa", "lat": -33.9608, "lon": 25.6022, "craft": "Mohair velvet", "blurb": "Fiber from the Angora goats of the Eastern Cape, woven into a velvet with a deep, liquid pile." },
+    { "id": "moradabad", "city": "Moradabad", "region": "Uttar Pradesh", "country": "India", "continent": "Asia", "lat": 28.8389, "lon": 78.7768, "craft": "Cast brass", "blurb": "India's brass city, where fittings are sand-cast, hand-filed, and polished to a soft glow." },
+    { "id": "hawick", "city": "Hawick", "region": "Scottish Borders", "country": "Scotland", "continent": "Europe", "lat": 55.4233, "lon": -2.7864, "craft": "Scottish tweed", "blurb": "Wool woven in the Borders, where mills have stood beside the River Teviot for two centuries." },
+    { "id": "belem", "city": "Belém", "region": "Pará", "country": "Brazil", "continent": "Americas", "lat": -1.4558, "lon": -48.5044, "craft": "Freijó timber", "blurb": "A warm, golden hardwood from the Amazon basin, turned into slender tapered legs." }
+  ],
+  "pieces": [
+    {
+      "slug": "lansdowne", "name": "The Lansdowne", "short": "Lansdowne", "type": "Chesterfield", "model": "chesterfield", "order": 1, "featured": true,
+      "tagline": "A deep-buttoned classic, tanned in Tuscany.",
+      "description": "The Chesterfield, made the way it should have been all along. Full-grain leather from the oak-bark tanneries of Tuscany is cut by hand over a kiln-dried beech frame, then buttoned into the diamond back that gives the Lansdowne its quiet authority. It softens, darkens, and improves with every year you sit in it.",
+      "price": 18400, "defaultSize": "three",
+      "sizes": [
+        { "id": "two", "label": "Two-seat", "seats": 2, "delta": -3600 },
+        { "id": "three", "label": "Three-seat", "seats": 3, "delta": 0 },
+        { "id": "four", "label": "Four-seat", "seats": 4, "delta": 4800 }
+      ],
+      "material": { "id": "tuscan-leather", "name": "Tuscan full-grain leather", "fabric": "leather", "origin": "santa-croce", "care": "Dust weekly and condition twice a year. Patina and small marks are part of the character." },
+      "colorways": [
+        { "id": "cognac", "name": "Cognac", "hex": "#9A5A2C" },
+        { "id": "tobacco", "name": "Tobacco", "hex": "#6B4226" },
+        { "id": "bottle", "name": "Bottle green", "hex": "#34503B" },
+        { "id": "saddle", "name": "Saddle", "hex": "#B07842" }
+      ],
+      "legs": [
+        { "id": "walnut", "name": "Turned walnut", "finish": "walnut", "delta": 0 },
+        { "id": "ebonized", "name": "Ebonized oak", "finish": "ebonized", "delta": 0 },
+        { "id": "brass", "name": "Cast brass", "finish": "brass", "delta": 900 }
+      ],
+      "accent": "#B4603C", "accent2": "#E7DAC3",
+      "journey": [
+        { "origin": "santa-croce", "role": "Leather" },
+        { "origin": "high-wycombe", "role": "Beech frame" },
+        { "origin": "moradabad", "role": "Brass nailheads" }
+      ],
+      "details": [
+        ["Frame", "Kiln-dried beech, mortised and doweled"],
+        ["Seat", "Eight-way hand-tied springs, feather-wrapped foam"],
+        ["Leather", "Full-grain, vegetable-tanned"],
+        ["Trim", "Hand-set brass nailheads"],
+        ["Feet", "Turned, with your choice of finish"]
+      ],
+      "leadWeeks": [10, 12],
+      "scene": { "wall": "#4A5A35", "wall2": "#3A4929", "rug": "#8A6A4A", "rug2": "#C9A66B", "art": ["#D98A5B", "#E7DAC3", "#5A3D2B"] },
+      "tags": ["leather", "classic", "tufted"]
+    },
+    {
+      "slug": "albemarle", "name": "The Albemarle", "short": "Albemarle", "type": "Cloud sofa", "model": "cloud", "order": 2, "featured": true,
+      "tagline": "Soft as the Andes, shaped like a cloud.",
+      "description": "A low, enveloping sofa dressed in alpaca bouclé spun at the edge of the Andes. Every cushion is filled with down and feather so the Albemarle holds you the moment you sit. A wool bolster woven by cooperatives in the Atlas Mountains arrives with each sofa.",
+      "price": 14900, "defaultSize": "three",
+      "sizes": [
+        { "id": "two", "label": "Two-seat", "seats": 2, "delta": -3100 },
+        { "id": "three", "label": "Three-seat", "seats": 3, "delta": 0 },
+        { "id": "four", "label": "Four-seat", "seats": 4, "delta": 4200 }
+      ],
+      "material": { "id": "alpaca-boucle", "name": "Alpaca bouclé", "fabric": "boucle", "origin": "arequipa", "care": "Brush gently with the grain and blot spills at once. Professional cleaning only." },
+      "colorways": [
+        { "id": "oat", "name": "Oat", "hex": "#DCCFB4" },
+        { "id": "camel", "name": "Camel", "hex": "#B98F5E" },
+        { "id": "moss", "name": "Moss", "hex": "#6F7650", "accent": "#DCCFB4" },
+        { "id": "clay", "name": "Clay", "hex": "#B97A57", "accent": "#E7DAC3" }
+      ],
+      "legs": [
+        { "id": "walnut", "name": "Walnut plinth", "finish": "walnut", "delta": 0 },
+        { "id": "oak", "name": "Oiled oak plinth", "finish": "oak", "delta": 0 }
+      ],
+      "accent": "#B97A57", "accent2": "#E7DAC3",
+      "journey": [
+        { "origin": "arequipa", "role": "Alpaca bouclé" },
+        { "origin": "herning", "role": "Beech frame" },
+        { "origin": "azilal", "role": "Wool bolster" }
+      ],
+      "details": [
+        ["Frame", "Solid beech, built in Jutland"],
+        ["Seat", "Down-wrapped, high-resilience foam"],
+        ["Fabric", "Alpaca and wool bouclé"],
+        ["Bolster", "Hand-woven wool, High Atlas"],
+        ["Base", "Recessed plinth"]
+      ],
+      "leadWeeks": [12, 14],
+      "scene": { "wall": "#B9AE95", "wall2": "#A89C82", "rug": "#6F7650", "rug2": "#DCCFB4", "art": ["#4F5F38", "#E7DAC3", "#B97A57"] },
+      "tags": ["bouclé", "soft", "modern"]
+    },
+    {
+      "slug": "pembroke", "name": "The Pembroke", "short": "Pembroke", "type": "Camelback", "model": "camelback", "order": 3, "featured": false,
+      "tagline": "A camelback in silk, woven on the Ganges.",
+      "description": "The camelback is an English classic. This one is dressed in hand-loomed silk brocade from Varanasi, over a frame built in the Cotswolds in the Arts and Crafts tradition, with turned legs and a brass-studded crest. Two cochineal-dyed cushions from Oaxaca come as standard.",
+      "price": 16200, "defaultSize": "three",
+      "sizes": [
+        { "id": "two", "label": "Two-seat", "seats": 2, "delta": -3300 },
+        { "id": "three", "label": "Three-seat", "seats": 3, "delta": 0 },
+        { "id": "four", "label": "Four-seat", "seats": 4, "delta": 4400 }
+      ],
+      "material": { "id": "varanasi-silk", "name": "Varanasi silk brocade", "fabric": "silk", "origin": "varanasi", "care": "Keep out of strong sun and blot spills; never rub. Professional cleaning only." },
+      "colorways": [
+        { "id": "saffron", "name": "Saffron", "hex": "#C69A48", "accent": "#B4603C" },
+        { "id": "terracotta", "name": "Terracotta", "hex": "#B4603C", "accent": "#E7DAC3" },
+        { "id": "sage", "name": "Sage", "hex": "#8B9275", "accent": "#B4603C" },
+        { "id": "walnut", "name": "Walnut", "hex": "#6B4A33", "accent": "#C69A48" }
+      ],
+      "legs": [
+        { "id": "walnut", "name": "Turned walnut", "finish": "walnut", "delta": 0 },
+        { "id": "ebonized", "name": "Ebonized beech", "finish": "ebonized", "delta": 0 }
+      ],
+      "accent": "#B4603C", "accent2": "#E7DAC3",
+      "journey": [
+        { "origin": "varanasi", "role": "Silk brocade" },
+        { "origin": "chipping-campden", "role": "Frame" },
+        { "origin": "teotitlan", "role": "Cochineal cushions" }
+      ],
+      "details": [
+        ["Frame", "English beech with walnut legs"],
+        ["Seat", "Coil springs, horsehair, and cotton wadding"],
+        ["Fabric", "Silk brocade, hand-loomed"],
+        ["Trim", "Brass nailhead crest"],
+        ["Cushions", "Cochineal-dyed wool, Oaxaca"]
+      ],
+      "leadWeeks": [14, 16],
+      "scene": { "wall": "#7E8B63", "wall2": "#6B7952", "rug": "#8A6A4A", "rug2": "#E7DAC3", "art": ["#C69A48", "#E7DAC3", "#4F5F38"] },
+      "tags": ["silk", "classic", "english"]
+    },
+    {
+      "slug": "kingsley", "name": "The Kingsley", "short": "Kingsley", "type": "Daybed", "model": "daybed", "order": 4, "featured": true,
+      "tagline": "A daybed dyed with persimmon.",
+      "description": "A long, low daybed made for afternoons. The cotton is brushed with kakishibu, a dye pressed from unripe persimmons, then cured in the sun until it deepens to a rich amber-brown. The frame is hinoki cypress, joined without screws by craftspeople in Takayama.",
+      "price": 9800, "defaultSize": "three",
+      "sizes": [
+        { "id": "two", "label": "Chaise", "seats": 2, "delta": -1600 },
+        { "id": "three", "label": "Daybed", "seats": 3, "delta": 0 },
+        { "id": "four", "label": "Grand daybed", "seats": 4, "delta": 1900 }
+      ],
+      "material": { "id": "persimmon-canvas", "name": "Persimmon-dyed cotton", "fabric": "canvas", "origin": "kyoto", "care": "Sun deepens the color over time. Spot-clean with a damp cloth; do not machine wash." },
+      "colorways": [
+        { "id": "persimmon", "name": "Persimmon", "hex": "#A35A30", "accent": "#E1D5BC" },
+        { "id": "hull", "name": "Walnut hull", "hex": "#6A4630", "accent": "#E1D5BC" },
+        { "id": "rice", "name": "Rice paper", "hex": "#E1D5BC", "accent": "#A35A30" },
+        { "id": "sumi", "name": "Sumi", "hex": "#3B332C", "accent": "#E1D5BC" }
+      ],
+      "legs": [
+        { "id": "oak", "name": "Tapered oak", "finish": "oak", "delta": 0 },
+        { "id": "walnut", "name": "Tapered walnut", "finish": "walnut", "delta": 0 }
+      ],
+      "accent": "#E1D5BC", "accent2": "#6A4630",
+      "journey": [
+        { "origin": "kyoto", "role": "Persimmon-dyed cotton" },
+        { "origin": "takayama", "role": "Hinoki frame" }
+      ],
+      "details": [
+        ["Frame", "Hinoki cypress, screwless joinery"],
+        ["Mattress", "Natural latex and cotton"],
+        ["Fabric", "Persimmon-dyed cotton canvas"],
+        ["Bolster", "Matching canvas, kapok filled"],
+        ["Legs", "Tapered, hand-finished"]
+      ],
+      "leadWeeks": [12, 14],
+      "scene": { "wall": "#C8B797", "wall2": "#B6A582", "rug": "#4F5F38", "rug2": "#E1D5BC", "art": ["#A35A30", "#E1D5BC", "#3B332C"] },
+      "tags": ["cotton", "daybed", "natural dye"]
+    },
+    {
+      "slug": "sloane", "name": "The Sloane", "short": "Sloane", "type": "Settee", "model": "channel", "order": 5, "featured": true, "heroColor": "rust",
+      "tagline": "Channel-tufted mohair, cast in brass.",
+      "description": "A compact settee with the presence of a larger sofa. Vertical channels run up the back and arms in deep mohair velvet from the Eastern Cape, and the tapered legs are sand-cast in solid brass in Moradabad. It sits as happily at the foot of a bed as it does in a drawing room.",
+      "price": 8600, "defaultSize": "two",
+      "sizes": [
+        { "id": "two", "label": "Settee", "seats": 2, "delta": 0 },
+        { "id": "three", "label": "Sofa", "seats": 3, "delta": 2600 }
+      ],
+      "material": { "id": "mohair-velvet", "name": "Mohair velvet", "fabric": "velvet", "origin": "gqeberha", "care": "Brush with the pile and blot spills at once. Professional cleaning only." },
+      "colorways": [
+        { "id": "moss", "name": "Moss", "hex": "#4F5B35", "accent": "#D8B04C" },
+        { "id": "rust", "name": "Rust", "hex": "#A5522F", "accent": "#E7DAC3" },
+        { "id": "mustard", "name": "Mustard", "hex": "#C99A3A", "accent": "#4F5B35" },
+        { "id": "mushroom", "name": "Mushroom", "hex": "#8D7C6B", "accent": "#C99A3A" }
+      ],
+      "legs": [
+        { "id": "brass", "name": "Cast brass", "finish": "brass", "delta": 0 },
+        { "id": "ebonized", "name": "Ebonized walnut", "finish": "ebonized", "delta": -600 }
+      ],
+      "accent": "#D8B04C", "accent2": "#E7DAC3",
+      "journey": [
+        { "origin": "gqeberha", "role": "Mohair velvet" },
+        { "origin": "moradabad", "role": "Cast brass legs" },
+        { "origin": "high-wycombe", "role": "Beech frame" }
+      ],
+      "details": [
+        ["Frame", "Solid beech"],
+        ["Seat", "Coil springs, down-wrapped foam"],
+        ["Fabric", "Mohair velvet, channel-tufted"],
+        ["Legs", "Sand-cast solid brass"],
+        ["Trim", "Brass base rail"]
+      ],
+      "leadWeeks": [10, 12],
+      "scene": { "wall": "#3F4D30", "wall2": "#2F3B24", "rug": "#A5522F", "rug2": "#E7DAC3", "art": ["#C99A3A", "#E7DAC3", "#7A6D5A"] },
+      "tags": ["velvet", "compact", "brass"]
+    },
+    {
+      "slug": "marylebone", "name": "The Marylebone", "short": "Marylebone", "type": "Mid-century sofa", "model": "midcentury", "order": 6, "featured": false,
+      "tagline": "Mid-century lines in Borders tweed.",
+      "description": "Clean, square, and slim, with the proportions of a 1950s drawing-room sofa and the cloth of a Scottish estate. Herringbone tweed is woven in Hawick over an oak frame from Jutland, standing on slender freijó legs from the Amazon basin.",
+      "price": 11400, "defaultSize": "three",
+      "sizes": [
+        { "id": "two", "label": "Two-seat", "seats": 2, "delta": -2400 },
+        { "id": "three", "label": "Three-seat", "seats": 3, "delta": 0 },
+        { "id": "four", "label": "Four-seat", "seats": 4, "delta": 3000 }
+      ],
+      "material": { "id": "hawick-tweed", "name": "Hawick herringbone tweed", "fabric": "tweed", "origin": "hawick", "care": "Vacuum gently and spot-clean with a damp cloth. Tweed sheds a little at first; that is normal." },
+      "colorways": [
+        { "id": "bracken", "name": "Bracken", "hex": "#7B5E3B", "accent": "#B4603C" },
+        { "id": "lichen", "name": "Lichen", "hex": "#8A8D63", "accent": "#E7DAC3" },
+        { "id": "peat", "name": "Peat", "hex": "#4A3B30", "accent": "#C99A3A" },
+        { "id": "stone", "name": "Stone", "hex": "#A79D88", "accent": "#7B5E3B" }
+      ],
+      "legs": [
+        { "id": "walnut", "name": "Freijó, walnut stain", "finish": "walnut", "delta": 0 },
+        { "id": "oak", "name": "Freijó, natural", "finish": "oak", "delta": 0 },
+        { "id": "brass", "name": "Cast brass", "finish": "brass", "delta": 700 }
+      ],
+      "accent": "#B4603C", "accent2": "#E7DAC3",
+      "journey": [
+        { "origin": "hawick", "role": "Herringbone tweed" },
+        { "origin": "herning", "role": "Oak frame" },
+        { "origin": "belem", "role": "Freijó legs" }
+      ],
+      "details": [
+        ["Frame", "Danish oak"],
+        ["Seat", "Feather-wrapped foam over webbing"],
+        ["Fabric", "Wool herringbone tweed"],
+        ["Legs", "Freijó, hand-finished"],
+        ["Arms", "Walnut-capped track arms"]
+      ],
+      "leadWeeks": [9, 11],
+      "scene": { "wall": "#66764F", "wall2": "#556341", "rug": "#7B5E3B", "rug2": "#E7DAC3", "art": ["#B4603C", "#E7DAC3", "#2E3A23"] },
+      "tags": ["tweed", "mid-century", "scottish"]
+    }
+  ]
+}

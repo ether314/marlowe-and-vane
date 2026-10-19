@@ -1,0 +1,25 @@
+{
+  "name": "marlowe-and-vane",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Marlowe & Vane: a luxury sofa house on Firebase Hosting and Firestore",
+  "devDependencies": {
+    "@fontsource-variable/jost": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@fontsource/marcellus": "^5.3.0",
+    "d3-geo": "^3.1.1",
+    "firebase-tools": "^15.34.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "node tools/dev-server.mjs public 4174",
+    "dev:csp": "node tools/dev-server.mjs public 4175 csp",
+    "build:map": "node scripts/build-map.mjs",
+    "seed": "node scripts/seed-firestore.mjs",
+    "deploy": "firebase deploy --only hosting,firestore:rules",
+    "deploy:hosting": "firebase deploy --only hosting"
+  }
+}

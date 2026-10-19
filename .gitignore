@@ -1,0 +1,8 @@
+node_modules/
+.firebase/
+.claude/
+*.log
+.DS_Store
+.env
+.env.*
+*.pem

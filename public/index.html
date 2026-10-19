@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Marlowe &amp; Vane · The well-traveled sofa</title>
+  <meta name="description" content="Fine seating gathered from workshops on four continents and finished by hand. Leather from Tuscany, bouclé from the Andes, silk from the Ganges.">
+  <meta name="theme-color" content="#2e3a23">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marlowe &amp; Vane">
+  <meta property="og:title" content="Marlowe &amp; Vane · The well-traveled sofa">
+  <meta property="og:description" content="Fine seating gathered from workshops on four continents and finished by hand.">
+  <link rel="preload" href="/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/boot.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__panel intro__panel--l"></div>
+    <div class="intro__panel intro__panel--r"></div>
+    <div class="intro__inner">
+      <svg class="intro__monogram" viewBox="0 0 128 128" aria-hidden="true">
+        <g class="intro__m"><text x="12" y="64" font-size="68">M</text></g>
+        <g class="intro__v"><text x="62" y="100" font-size="68">V</text></g>
+        <path class="intro__star" d="M38 98 40.4 106.6 49 109 40.4 111.4 38 120 35.6 111.4 27 109 35.6 106.6Z" fill="#f2e6a8"/>
+      </svg>
+      <div class="intro__word">Marlowe <span class="amp">&amp;</span> Vane</div>
+      <div class="intro__tag">The well-traveled sofa</div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <a class="brand" href="/" data-link aria-label="Marlowe and Vane, home">
+      <svg class="brand__mark" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+        <path d="M36 20V68" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M14 20H54" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M60 20 48 14v12Z" fill="currentColor"/>
+        <path d="M14 20 8 14M14 20 8 26M22 20 16 14M22 20 16 26" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="36" cy="20" r="3" stroke="currentColor" stroke-width="2.2"/>
+        <path d="M25 46H47" stroke="currentColor" stroke-width="2.2"/>
+      </svg>
+      <span>Marlowe <span class="amp">&amp;</span> Vane</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/collection" data-link>Collection</a>
+      <a href="/#provenance" data-link>Provenance</a>
+      <a href="/#materials" data-link>Materials</a>
+      <a href="/#passport" data-link>Passport</a>
+    </nav>
+    <div class="header__actions">
+      <button class="bagbtn" id="bagBtn" type="button" aria-label="Open your bag"><span>Bag</span><b id="bagCount" data-n="0">0</b></button>
+      <button class="menubtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobnav" id="mobnav" aria-label="Mobile">
+    <a href="/collection" data-link>Collection</a>
+    <a href="/#provenance" data-link>Provenance</a>
+    <a href="/#materials" data-link>Materials</a>
+    <a href="/#passport" data-link>Passport</a>
+  </nav>
+
+  <main id="main" tabindex="-1"></main>
+  <footer class="footer" id="footer"></footer>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="bag" id="bag" aria-label="Your bag" aria-hidden="true">
+    <div class="bag__head">
+      <h3>Your bag</h3>
+      <button class="iconbtn" id="bagClose" type="button" aria-label="Close bag"><svg viewBox="0 0 16 16" fill="none"><path d="M2 2l12 12M14 2 2 14" stroke="currentColor" stroke-width="1.2"/></svg></button>
+    </div>
+    <div class="bag__items" id="bagItems"></div>
+    <div class="bag__foot" id="bagFoot"></div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Fabric detail">
+    <div class="modal__bg" data-close></div>
+    <div class="modal__panel" id="modalPanel"></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div style="padding:120px 24px;max-width:640px;margin:auto;font-family:Georgia,serif;color:#f2e6a8">
+      <h1 style="font-weight:400">Marlowe &amp; Vane</h1>
+      <p>The well-traveled sofa. This site needs JavaScript to show the collection. Please enable it and reload.</p>
+    </div>
+  </noscript>
+</body>
+</html>
